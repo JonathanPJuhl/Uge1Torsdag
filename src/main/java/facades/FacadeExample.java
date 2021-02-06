@@ -63,7 +63,8 @@ public class FacadeExample {
     public static void main(String[] args) {
         EntityManagerFactory emf = EMF_Creator.createEntityManagerFactory();
         FacadeExample fe = getFacadeExample(emf);
-        
+        EmployeeFacade ef = EmployeeFacade.getEmployeeFacade(emf);
+        ef.addEmployee("Bo", "Vej", 12);
     }
 
 }
